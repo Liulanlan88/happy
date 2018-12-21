@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="果芽官网">
+    <test name="查询面试">
+        <classes>
+            <class name="com.guoyasoft.gyautotest.ui.testCase.text.GuoYa.testguoya.guoya">
+                <methods>
+                    <include name="textSearch2"/>
+                    <include name="textSearch1"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

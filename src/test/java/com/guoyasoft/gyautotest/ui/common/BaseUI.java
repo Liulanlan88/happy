@@ -42,7 +42,8 @@ public class BaseUI {
 				ChromeOptions options = new ChromeOptions();
 				// 最大化浏览器
 				options.addArguments("--test-type", "--start-maximized");
-				// options.setBinary("C:/XXXXXXX/chrome.exe");
+
+				 options.setBinary("C:\\\\Users\\\\xue00\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe");
 				// 打开浏览器
 				driver = new ChromeDriver(options);
 				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -51,13 +52,13 @@ public class BaseUI {
 
 	}
 
-	@Test
-	public void openUrl(String url){
-		//打开URL
-		driver.get(url);
-		sleep(1);
-
-	}
+//	@Test
+//	public void openUrl(String url){
+//		//打开URL
+//		driver.get(url);
+//		sleep(1);
+//
+//	}
 
 	@AfterClass
 	public void after(){
@@ -213,13 +214,13 @@ public class BaseUI {
 		}
 	}
 
-	@Test
-	public void loginByCookie(String cookieName,String cookieValue){
-		Cookie cookie= driver.manage().getCookieNamed(cookieName);
-		driver.manage().deleteCookie(cookie);
-		Cookie session=new Cookie(cookieName, cookieValue);
-		driver.manage().addCookie(session);
-	}
+//	@Test
+//	public void loginByCookie(String cookieName,String cookieValue){
+//		Cookie cookie= driver.manage().getCookieNamed(cookieName);
+//		driver.manage().deleteCookie(cookie);
+//		Cookie session=new Cookie(cookieName, cookieValue);
+//		driver.manage().addCookie(session);
+//	}
 
 	public void addScreenshot2Allure(String stepName){
 		Allure.addByteAttachmentAsync(stepName, "image/jpeg", new Supplier<byte[]>() {
